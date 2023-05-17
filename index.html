@@ -4,37 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Idade</title>
-    <style>
-        * {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        body {
-            background-color: #131313;
-            color: white;
-            font-size: 18px;
-        }
-
-        input[type="number"] {
-            outline: none;
-            text-align: center;
-        }
-
-        #quest {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #303030;
-            text-align: center;
-            border-radius: 10px;
-            padding: 20px;
-            line-height: 30px;
-            width: 30%;
-            min-width: 300px;
-            max-width: 350px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
@@ -54,30 +25,6 @@
             <label id="resultado"></label>
         </form>
     </div>
+    <script src="script.js"></script>
 </body>
-
-<script>
-    var fYear = document.getElementById('pergBDay')
-    fYear.style.display = 'none'
-
-    var rS = document.getElementById('rBDs')
-    var rN = document.getElementById('rBDn')
-    var res = document.getElementById('resultado')
-
-    function escondeItem() {
-        var form = document.getElementById('pergYear')
-        form.style.display = 'none'
-        fYear.style.display = 'block'
-    }
-
-    function mostraIdade() {
-        var ano = document.getElementById('year').value
-        if (rS.checked) {
-            res.textContent = 'Sua idade é ' + (2023 - ano)
-        } else {
-            res.textContent = 'Sua idade é ' + (2022 - ano)
-        }
-    }
-</script>
-
 </html>
